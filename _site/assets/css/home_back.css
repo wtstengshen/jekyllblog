@@ -1,0 +1,12 @@
+body td{
+	font-size:14px;
+	font-family:"微软雅黑","Helvetica Neue","Helvetica","Arial","sans-serif";
+	line-height:18px;
+}
+#title_bar_west{
+	background:url("../images/grid-18px-masked.png") repeat-x; 
+}
+#title_bar_center{
+	background:url("../images/grid-18px-masked.png") repeat-x;
+}
+
