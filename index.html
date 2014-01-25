@@ -2,11 +2,26 @@
 layout: default
 title: home
 ---
-<h1>Hello jekyll</h1> 
-<p>This is the index page</p>
-<p>My post list:</p>
+
 <ul>
    {% for post in site.posts %}
-       <li><a href="{{site.baseurl}}{{post.baseurl}}{{ post.url }}">{{post.title }}</a></li>
+   <div>
+		<div>
+			<section>
+				<h3><a href="{{site.baseurl}}{{post.baseurl}}{{ post.url }}">{{post.title }}</a></h3>
+				<div>
+					{{post.content}}
+				</div>
+			</section>
+		</div>
+		<div class="pull-right">
+			<pre><a class="btn btn-link btn-small" href="#">阅读全文</a> Date:{{post.date|date:"%Y-%m-%d"}}</pre>
+		</div>
+	</div>
+	<br />
+	<br />
+	<hr />
    {% endfor %}
 </ul>
+
+
