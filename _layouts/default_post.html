@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:wb="http://open.weibo.com/wb">
+<html>
 <head>
 <title>{{page.title}}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" href="http://jekyllcss.qiniudn.com/common.css">
-<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 
 </head>
 <body>
@@ -15,15 +13,11 @@
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
-					<a name="top"></a> <a class="brand active" href="{{site.baseurl}}"><i
+					<a name="top"></a> <a class="brand active" href="${ctx}/index"><i
 						class="icon-home"> </i>Hello Wolrd! </a>
 					<ul class="nav">
-						<!--<li class="active divider-vertical"><a
-							href="#">Java</a></li>
 						<li class="divider-vertical"><a
-									href="#">Python</a></li>-->
-						<li class="divider-vertical"><a
-									href="{{site.baseurl}}{{site.abouturl}}">About</a></li>			
+									href="#">About</a></li>			
 					</ul>
 				</div>
 			</div>
@@ -40,9 +34,9 @@
 						<div id="content_head" class="span12">
 							<div class="page-header">
 								<h1>
-									Hello World! <small>一切为发烧而生!</small>
+									Hello World! <small>All born to have a fever!</small>
 								</h1>
-								<a class="btn btn-primary btn-small" href="#"> Learn About</a>
+								<a class="btn btn-primary btn-small"> Learn More </a>
 							</div>
 						</div>
 					</div>
@@ -54,51 +48,35 @@
 					<div class="row-fluid">
 						<div class="span12">
 							<!-- Body center content -->
-							<div class="span9" id="content_left">
+							<div class="span12" id="content_left">
 								<div class="container-fluid">
 									<div class="row-fluid">
 										<div class="span12">
-												{{content}}
+												<div>
+													<div>
+														<section>
+															<h3><a href="{{ page.url }}">{{page.title}}</a></h3>
+															<div>
+																{{page.content}}
+															</div>
+														</section>
+													</div>
+													<div class="pull-right">
+														<pre>Date:{{page.date|date:"%Y-%m-%d"}}</pre>
+													</div>
+												</div>
 											<!--<div class="pagination pull-right">
 												<ul>
-														<li><a
-															href="#">Prev</a></li>
-														<li><a
-															href="#">Next</a></li>
+													<li><a
+														href="#">Prev</a></li>
+													<li><a
+														href="#">Next</a></li>
 												</ul>
 											</div>-->
 										</div>
 
 									</div>
 								</div>
-							</div>
-							<div class="span3" id="content_right">
-								<div class="well sidebar-nav">
-									<ul class="nav nav-list">
-										<li class="nav-header">About Me</li>
-										<li>
-											<wb:follow-button uid="1834034223" type="red_3" width="100%" height="24" ></wb:follow-button>
-										</li>
-									</ul>
-								</div>
-								<div class="well sidebar-nav">
-									<ul class="nav nav-list">
-										<li class="nav-header">近期文章</li>
-										{% for post in site.posts limit 5%}
-											<li><a href="{{post.url}}">{{post.title}}</a></li>
-										{% endfor %}
-									</ul>
-								</div>
-								<div class="well sidebar-nav">
-									<ul class="nav nav-list">
-										<li class="nav-header">Links</li>
-											<li><a id="aexple" href="www.baidu.com"
-												target="#"
-												title="#">
-													百度</a></li>
-									</ul>
-								</div>
-
 							</div>
 						</div>
 					</div>

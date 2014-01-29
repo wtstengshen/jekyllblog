@@ -8,14 +8,14 @@ title: home
    <div>
 		<div>
 			<section>
-				<h3><a href="{{site.baseurl}}{{post.baseurl}}{{ post.url }}">{{post.title }}</a></h3>
+				<h3><a href="{{ post.url }}">{{post.title}}</a></h3>
 				<div>
-					{{post.content}}
+					{{post.excerpt}}
 				</div>
 			</section>
 		</div>
 		<div class="pull-right">
-			<pre><a class="btn btn-link btn-small" href="#">阅读全文</a> Date:{{post.date|date:"%Y-%m-%d"}}</pre>
+			<pre><a class="btn btn-link btn-small" href="{{post.url}}">阅读全文</a> Date:{{post.date|date:"%Y-%m-%d"}}</pre>
 		</div>
 	</div>
 	<br />

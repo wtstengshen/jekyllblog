@@ -1,4 +1,9 @@
 encoding: utf-8
 baseurl: /
+abouturl: pages/about.html
+
+
+markdown:      maruku
+markdown_ext:  markdown,mkd,mkdn,md
 
 
