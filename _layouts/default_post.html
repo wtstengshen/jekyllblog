@@ -1,104 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>{{page.title}}</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
-<link type="text/css" rel="stylesheet" href="http://jekyllcss.qiniudn.com/common.css">
-
-</head>
-<body>
-	<div>
-		<!--narbar-->
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<a name="top"></a> <a class="brand active" href="${ctx}/index"><i
-						class="icon-home"> </i>Hello Wolrd! </a>
-					<ul class="nav">
-						<li class="divider-vertical"><a
-									href="#">About</a></li>			
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid">
-		<div class="row-fluid" id="content_head_title">
-			<div class="span1"></div>
-			<!-- Body content start -->
-			<div class="span10">
-				<!-- Body head content start-->
-				<div class="container-fluid">
-					<div class="row-fluid">
-						<div id="content_head" class="span12">
-							<div class="page-header">
-								<h1>
-									Hello World! <small>All born to have a fever!</small>
-								</h1>
-								<a class="btn btn-primary btn-small"> Learn More </a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Body head content start-->
-				<!-- Body content start -->
-				<a href="#top"></a>
+---
+layout: default
+---
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<!-- Body center content -->
+			<div class="span12" id="content_left">
 				<div class="container-fluid">
 					<div class="row-fluid">
 						<div class="span12">
-							<!-- Body center content -->
-							<div class="span12" id="content_left">
-								<div class="container-fluid">
-									<div class="row-fluid">
-										<div class="span12">
-												<div>
-													<div>
-														<section>
-															<h3><a href="{{ page.url }}">{{page.title}}</a></h3>
-															<div>
-																{{page.content}}
-															</div>
-														</section>
-													</div>
-													<div class="pull-right">
-														<pre>Date:{{page.date|date:"%Y-%m-%d"}}</pre>
-													</div>
-												</div>
-											<!--<div class="pagination pull-right">
-												<ul>
-													<li><a
-														href="#">Prev</a></li>
-													<li><a
-														href="#">Next</a></li>
-												</ul>
-											</div>-->
-										</div>
-
+								<div>
+									<div>
+										<section>
+											<h3><a href="{{ page.url }}">{{page.title}}</a></h3>
+											<div>
+												{{content}}
+											</div>
+										</section>
+									</div>
+									<div class="pull-right">
+										<pre>Date:{{page.date|date:"%Y-%m-%d"}}</pre>
 									</div>
 								</div>
-							</div>
+							<!--<div class="pagination pull-right">
+								<ul>
+									<li><a
+										href="#">Prev</a></li>
+									<li><a
+										href="#">Next</a></li>
+								</ul>
+							</div>-->
 						</div>
+
 					</div>
 				</div>
-				<!-- Body content end -->
-				<!-- Body buttom bar start -->
-				<hr class="featurette-divider">
-				<div class="container-fluid">
-					<div class="row-fluid">
-						<div class="span12" id="button_bar">
-							<a href="#top" class="pull-right">Top</a>
-							<p>倾注于代码的编写和设计!</p>
-						</div>
-					</div>
-				</div>
-				<!-- Body buttom bar end -->
 			</div>
-			<div class="span1"></div>
 		</div>
-		<!-- Body content start -->
 	</div>
-	<script src="http://cdn.staticfile.org/jquery/2.0.3/jquery.min.js"></script>
-	<script src="http://cdn.staticfile.org/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+</div>
