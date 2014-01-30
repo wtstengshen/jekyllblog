@@ -1,7 +1,11 @@
 encoding: utf-8
 baseurl: /
 abouturl: pages/about.html
+websitetilte: Life4Code
 
+
+keywords: Life4Code,WEB开发,Java,Python,技术分享
+description: Life4Code分享技术文章和资源，让互联网更加互联
 
 markdown:      maruku
 markdown_ext:  markdown,mkd,mkdn,md
