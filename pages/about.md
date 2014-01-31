@@ -35,5 +35,5 @@ title: About
 
 [0]:http://www.jekyllrb.com
 [1]:https://github.com/wtstengshen
-[2]: http://weibo.com/wtstengshencom
+[2]:http://weibo.com/wtstengshencom
 
