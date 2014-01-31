@@ -1,6 +1,2 @@
 User-agent: *
-Disallow:/pages/
-Disallow:/_layouts/
-Disallow:/_posts/
-Disallow:/_site/
 Disallow:/CNAME
