@@ -8,6 +8,7 @@ title: Servlet的Request.getInputStream()只能读取一次问题
 
 　　为什么第二次在Servlet中获取InputStream的值为空，读取不到XML内容，这个问题要复习一下java中IO的知识了，在java中读取一个文件或者字符串的内容的代码大家都会写，下边是使用ByteArrayInputStream和ByteArrayOutputStream进行演示：
 
+{% highlight java linenos %}
 ```java
 @Test
 public void testByteArrayInputStream() throws Exception {
@@ -30,6 +31,7 @@ public void testByteArrayInputStream() throws Exception {
     
 }
 ```
+{% endhighlight %}
 复制代码
 打印结果是：AAAAACCCCcCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
