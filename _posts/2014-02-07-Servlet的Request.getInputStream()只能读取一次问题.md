@@ -35,7 +35,7 @@ public void testByteArrayInputStream() throws Exception {
 
 把一个String字符串的内容使用ByteArrayOutputStream读取出来，然后打印显示。这个代码没有什么问题，估计大家都能写出来，但是看一下下边添加一行代码之后的内容：
 
-```java
+{% highlight java linenos %}
 @Test
 public void testByteArrayInputStream() throws Exception {
     String str = "AAAAACCCCcCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB";
@@ -58,7 +58,7 @@ public void testByteArrayInputStream() throws Exception {
     }
     System.out.println(new String(byteOutput.toByteArray()));
 }
-```
+{% endhighlight %}
 
 复制代码
 打印结果是：CCCCcCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
@@ -84,15 +84,15 @@ request.getInputStream返回的其实ServletInputStream，查看一下源码你�
 
 　　InputStream的reset()方法源码是这样的：
 
-```java
+{% highlight java linenos %}
 public synchronized void reset() throws IOException {
        throw new IOException("mark/reset not supported");
 }
-```
+{% endhighlight %}
 
 调用reset方法直接抛出异常，所以ServletInputStream是不能调用reset方法，这就导致了只能调用一次getInputStream()，第二次调用的时候没有办法获取到InputStream流中的原因。现在我们更改一下上边读取String字符串的例子：
 
-```java
+{% highlight java linenos %}
 @Test
 public void testByteArrayInputStream() throws Exception {
     String str = "AAAAACCCCcCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB";
@@ -117,14 +117,14 @@ public void testByteArrayInputStream() throws Exception {
     }
     System.out.println(new String(byteOutput.toByteArray()));
 }
-```
+{% endhighlight %}
 
 复制代码
 打印结果是：AAAAACCCCcCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 在第8行添加一行代码，byteInputStream调用reset()方法，打印的结果回复了正常，我们看一下ByteInputStream中reset()的源码：
 
-```java
+{% highlight java linenos %}
 /**
  * Resets the buffer to the marked position.  The marked position
  * is 0 unless another position was marked or an offset was specified
@@ -133,7 +133,7 @@ public void testByteArrayInputStream() throws Exception {
 public synchronized void reset() {
     pos = mark;
 }
-```
+{% endhighlight %}
 复制代码
 这一次没有抛出异常，而是把mark的值赋值给pos了，mark的值为0，所以在调用reset()方法之后可以从头开始读取。
 
