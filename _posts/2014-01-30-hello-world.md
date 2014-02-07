@@ -25,7 +25,7 @@ title: hello world
 
 [0]:http://www.jekyllrb.com
 [1]:https://github.com
-[2]: http://weibo.com/wtstengshencom
+[2]:http://weibo.com/wtstengshencom
 　　
 
 
