@@ -5,7 +5,7 @@ websitetilte: Life4Code
 pygments: true
 
 keywords: Life4Code,WEB开发,Java,Python,技术分享
-description: life4code.com -- Life4Code分享技术文章和资源，让Code改变生活，让代码改变世界，让互联网更加互联。Happy Coding，Happy Life!
+description: life4code.com -- Life4Code分享技术文章和资源，专注Java，Python技术分享，专注分布式开发，高性能，高并发，让Code改变生活，让代码改变世界，让互联网更加互联。
 
 markdown:      maruku
 markdown_ext:  markdown,mkd,mkdn,md
